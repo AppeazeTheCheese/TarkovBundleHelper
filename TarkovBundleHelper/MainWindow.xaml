@@ -1,0 +1,24 @@
+﻿<Window x:Class="TarkovBundleHelper.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TarkovBundleHelper"
+        mc:Ignorable="d"
+        Title="Tarkov Bundle Helper" Height="450" Width="800">
+    <Grid>
+        <Menu FontFamily="Oswald" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="792">
+            <MenuItem Header="File">
+                <MenuItem x:Name="OpenMenuBtn" Header="Open" Click="OpenMenuBtn_Click"></MenuItem>
+                <MenuItem x:Name="CloseMenuBtn" Header="Close" Click="CloseMenuBtn_Click"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <Label FontFamily="Oswald" x:Name="StatusLabel" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Content="No bundle selected" HorizontalAlignment="Left" Margin="10,25,0,0" VerticalAlignment="Top" Width="772" Height="48" FontSize="25" FontWeight="Bold"/>
+        <ListBox FontFamily="Oswald" SelectionMode="Multiple" x:Name="DependencyListBox" HorizontalAlignment="Left" Height="253" Margin="15,156,0,0" VerticalAlignment="Top" Width="303" DisplayMemberPath="FileName" Loaded="DependencyListBox_Loaded" IsEnabled="False"/>
+        <Button FontFamily="Oswald" x:Name="AddBtn" Content="Add" HorizontalAlignment="Left" Margin="323,156,0,0" VerticalAlignment="Top" Width="100" Click="AddBtn_OnClick" IsEnabled="False"/>
+        <Button FontFamily="Oswald" x:Name="OpenFromFolderBtn" Content="Open from folder" HorizontalAlignment="Left" Margin="323,210,0,0" VerticalAlignment="Top" Width="100" Click="OpenFromFolderBtn_Click" IsEnabled="False"/>
+        <Button FontFamily="Oswald" x:Name="RemoveBtn" Content="Remove" HorizontalAlignment="Left" Margin="323,183,0,0" VerticalAlignment="Top" Width="100" Click="RemoveBtn_OnClick" IsEnabled="False"/>
+        <Label FontFamily="Oswald" HorizontalContentAlignment="Center" Content="Modded Dependencies" HorizontalAlignment="Left" Margin="10,119,0,0" VerticalAlignment="Top" Width="303" FontSize="15"/>
+        <Button FontFamily="Oswald" x:Name="GenerateIdsBtn" Content="Generate new CAB IDs" HorizontalAlignment="Left" Margin="492,371,0,0" VerticalAlignment="Top" Width="214" Height="38" FontSize="20" IsEnabled="False" Click="GenerateIdsBtn_Click"/>
+    </Grid>
+</Window>
